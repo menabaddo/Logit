@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/Theme.AppCompat.NoActionBar"
-    tools:context=".WelcomeActivity">
+    tools:context=".activity_instruction0">
 
     <TextView
         android:id="@+id/textView"
@@ -56,16 +56,42 @@
         app:layout_constraintVertical_bias="0.11"
         app:srcCompat="@drawable/scrolldots" />
 
-    <ImageView
-        android:id="@+id/imageView5"
+
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="null"
+        android:fontFamily="@font/sahitya"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.95"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.701" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="null"
+        android:fontFamily="@font/sahitya"
+        android:text="Skip"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.928"
-        app:srcCompat="@drawable/skip" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
