@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/sahitya"
-        android:text="CHECK YOUR\n DIGITAL\nLOGBOOK AND\n SO MUCH MORE"
+        android:text="CHECK YOUR\nDIGITAL\nLOGBOOK AND\nSO MUCH MORE"
         android:textColor="@color/black"
         android:textSize="36dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,4 +31,21 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:layout_constraintVertical_bias="0.478"
         app:srcCompat="@drawable/logbookimg" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="308dp"
+        android:layout_height="53dp"
+        android:background="@drawable/round_btn"
+        android:fontFamily="@font/sahitya"
+        android:text="Get Started"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:layout_constraintVertical_bias="0.535" />
 </androidx.constraintlayout.widget.ConstraintLayout>

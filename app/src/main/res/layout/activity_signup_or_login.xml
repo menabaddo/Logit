@@ -36,6 +36,7 @@
         android:fontFamily="@font/sahitya"
 
         android:text="Sign Up"
+        android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,15 +45,56 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView12"
         app:layout_constraintVertical_bias="0.097" />
 
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="308dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/round_btn_black"
+        android:fontFamily="@font/sahitya"
+        android:text="Sign Up"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.508"
-        app:srcCompat="@drawable/group213" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/sahitya"
+        android:text="OR"
+        android:textStyle="bold"
+        android:textColor="#3A3A3A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="308dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_btn_grey"
+        android:drawableLeft="@drawable/google"
+        android:drawablePadding="-30dp"
+        android:textStyle="bold"
+        android:paddingLeft="20dp"
+
+        android:fontFamily="@font/sahitya"
+        android:text="Sign Up With Google"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 </androidx.constraintlayout.widget.ConstraintLayout>
