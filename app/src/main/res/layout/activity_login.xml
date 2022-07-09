@@ -7,17 +7,17 @@
     tools:context=".login">
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/imageView12"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintDimensionRatio="4.12:1.1"
+        app:layout_constraintDimensionRatio="4:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/group207" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0"/>
+        app:layout_constraintGuide_percent="0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -38,17 +38,16 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/sahitya"
         android:text="Welcome Back!"
         android:textColor="@color/black"
         android:textSize="16dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11"
-        app:layout_constraintVertical_bias="0.777" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
 
     <TextView
         android:id="@+id/textView9"
@@ -59,26 +58,171 @@
         android:textColor="@color/black"
         android:textSize="36dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="209dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="276dp"
-        android:layout_height="46dp"
+        android:layout_width="290dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="76dp"
         android:ems="10"
+        android:fontFamily="@font/sahitya"
         android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="306dp" />
+        android:text="Reg. No*"
+        android:textColor="#6F6F6F"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
-        android:layout_width="273dp"
-        android:layout_height="46dp"
+        android:layout_width="291dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="29dp"
         android:ems="10"
+        android:fontFamily="@font/sahitya"
         android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="384dp" />
+        android:text="Password*"
+        android:textColor="#6F6F6F"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintHorizontal_bias="0.763"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:srcCompat="@drawable/bxsuser1" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="19dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.013"
+        app:srcCompat="@drawable/vector1" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="163dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/sahitya"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        android:text="Remember Password"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="35dp"
+        android:background="@null"
+        android:fontFamily="@font/sahitya"
+        android:text="Forgot Password?"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+        app:layout_constraintVertical_bias="0.043" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="308dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/round_btn_black"
+        android:fontFamily="@font/sahitya"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sahitya"
+        android:text="OR"
+        android:textColor="#3A3A3A"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="308dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/round_btn_grey"
+        android:drawableLeft="@drawable/google"
+        android:drawablePadding="-30dp"
+        android:fontFamily="@font/sahitya"
+
+        android:paddingLeft="20dp"
+        android:text="Sign Up With Google"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:fontFamily="@font/sahitya"
+        android:text="Already have an account? Login"
+        android:textAllCaps="false"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button8"
+        app:layout_constraintVertical_bias="0.344" />
 </androidx.constraintlayout.widget.ConstraintLayout>
