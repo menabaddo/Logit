@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/my_nav">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/camera2">
 
+    <fragment
+        android:id="@+id/student_history"
+        android:name="com.example.logit.student_history"
+        android:label="fragment_student_history"
+        tools:layout="@layout/fragment_student_history" />
+    <fragment
+        android:id="@+id/camera2"
+        android:name="com.example.logit.camera"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" />
 </navigation>
