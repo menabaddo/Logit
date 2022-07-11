@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Logit">
-        <activity android:name=".signup_name"></activity>
+        <activity android:name=".home_navigation"></activity>
+        <activity android:name=".student_scanner_signed_in" />
+        <activity android:name=".sign_up_create" />
+        <activity android:name=".signup_name" />
         <activity android:name=".login" /> <!-- <activity android:name=".activity_signup_or_login"></activity> -->
         <activity android:name=".activity_instruction4" />
         <activity android:name=".activity_instruction3" />
