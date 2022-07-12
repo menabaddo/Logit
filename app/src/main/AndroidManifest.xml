@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.logit">
 
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera.any"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Logit">
-        <activity android:name=".nav"></activity>
+        <activity android:name=".student_scanner"></activity>
+        <activity android:name=".nav" />
         <activity android:name=".student_scanner_signed_in" />
         <activity android:name=".sign_up_create" />
         <activity android:name=".signup_name" />
