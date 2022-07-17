@@ -30,6 +30,10 @@ import com.google.mlkit.vision.common.InputImage;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.List;
 import java.util.LongSummaryStatistics;
 import java.util.concurrent.ExecutionException;
@@ -100,6 +104,7 @@ public class student_scanner extends AppCompatActivity {
                 .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST).build();
 
         imageAnalysis.setAnalyzer(ContextCompat.getMainExecutor(student_scanner.this), new ImageAnalysis.Analyzer() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void analyze(@NonNull @NotNull ImageProxy image) {
                 Image mediaImage = image.getImage();
@@ -110,11 +115,22 @@ public class student_scanner extends AppCompatActivity {
                     BarcodeScanner scanner = BarcodeScanning.getClient();
                     Task<List<Barcode>> results = scanner.process(image2);
 
+
+
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                    Calendar c = Calendar.getInstance();
+                    String date = sdf.format(c.getTime());
+
                     results.addOnSuccessListener(new OnSuccessListener<List<Barcode>>() {
+                        @RequiresApi(api = Build.VERSION_CODES.O)
                         @Override
                         public void onSuccess(List<Barcode> barcodes) {
+
                             for(Barcode barcode: barcodes){
-                                Toast.makeText(student_scanner.this, "Successfully Scanned", Toast.LENGTH_SHORT).show();
+                                final String getValue = barcode.getRawValue();
+                                if(getValue.equals("test")) {
+                                    Toast.makeText(student_scanner.this, "Logged in " + date, Toast.LENGTH_SHORT).show();
+                                }
                             }
 
                             image.close();
