@@ -14,7 +14,6 @@
         android:theme="@style/Theme.Logit">
         <activity android:name=".student_scanner"></activity>
         <activity android:name=".nav" />
-        <activity android:name=".student_scanner_signed_in" />
         <activity android:name=".sign_up_create" />
         <activity android:name=".signup_name" />
         <activity android:name=".login" /> <!-- <activity android:name=".activity_signup_or_login"></activity> -->

@@ -13,6 +13,8 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.Image;
 import android.os.Build;
@@ -42,6 +44,7 @@ public class student_scanner extends AppCompatActivity {
 
     private PreviewView previewView;
     private ListenableFuture<ProcessCameraProvider> cameraProviderListenableFuture;
+    private String getValue = "";
 
 
 
@@ -107,7 +110,7 @@ public class student_scanner extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void analyze(@NonNull @NotNull ImageProxy image) {
-                Image mediaImage = image.getImage();
+                @SuppressLint("UnsafeOptInUsageError") Image mediaImage = image.getImage();
 
                 if(mediaImage != null){
                     InputImage image2 = InputImage.fromMediaImage(mediaImage, image.getImageInfo().getRotationDegrees());
@@ -127,25 +130,46 @@ public class student_scanner extends AppCompatActivity {
                         public void onSuccess(List<Barcode> barcodes) {
 
                             for(Barcode barcode: barcodes){
-                                final String getValue = barcode.getRawValue();
+
+                                getValue = barcode.getRawValue();
                                 if(getValue.equals("test")) {
                                     Toast.makeText(student_scanner.this, "Logged in " + date, Toast.LENGTH_SHORT).show();
+                                    imageAnalysis.clearAnalyzer();
+                                    startActivity(new Intent(student_scanner.this, nav.class));
+                                }else{
+                                    Toast.makeText(student_scanner.this, "Not recognized", Toast.LENGTH_SHORT).show();
                                 }
                             }
 
+
+
                             image.close();
                             mediaImage.close();
+
+
                         }
+
+
+
+
                     });
 
 
                 }
+
             }
+
         });
+
+
 
         Preview preview = new Preview.Builder().build();
         CameraSelector cameraSelector = new CameraSelector.Builder().requireLensFacing(CameraSelector.LENS_FACING_BACK).build();
         preview.setSurfaceProvider(previewView.getSurfaceProvider());
         processCameraProvider.bindToLifecycle(student_scanner.this, cameraSelector, imageAnalysis, preview);
+
+
     }
+
+
 }

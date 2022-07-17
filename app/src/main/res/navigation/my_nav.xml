@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_student_history" />
     <fragment
         android:id="@+id/camera2"
-        android:name="com.example.logit.camera"
+        android:name="com.example.logit.logged_in"
         android:label="fragment_camera"
         tools:layout="@layout/fragment_camera" />
 </navigation>

@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link camera#newInstance} factory method to
+ * Use the {@link logged_in#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class camera extends Fragment {
+public class logged_in extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ public class camera extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public camera() {
+    public logged_in() {
         // Required empty public constructor
     }
 
@@ -37,8 +37,8 @@ public class camera extends Fragment {
      * @return A new instance of fragment camera.
      */
     // TODO: Rename and change types and number of parameters
-    public static camera newInstance(String param1, String param2) {
-        camera fragment = new camera();
+    public static logged_in newInstance(String param1, String param2) {
+        logged_in fragment = new logged_in();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +59,6 @@ public class camera extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_camera, container, false);
+        return inflater.inflate(R.layout.fragment_logged_in, container, false);
     }
 }
